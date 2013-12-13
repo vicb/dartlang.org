@@ -84,16 +84,16 @@ $(function(){
   
   var popOpen = false;
 
-  $(".dart-popover").popover();
+  $('.dart-popover').popover();
 
-  $('.dart-popover').on( "click", function(e) {
+  $('.dart-popover').on( 'click', function(e) {
     e.preventDefault();
     if (popOpen) {
-      $(".dart-popover").not(this).popover('hide');
+      $('.dart-popover').not(this).popover('hide');
     } 
     popOpen = true;
-  });
 
+  });
 
   // Adding the navigation to the popup
   // $("a.dart-popover").each(function(index) {

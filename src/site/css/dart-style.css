@@ -5,7 +5,9 @@ body {
 }
 
 /* ***** General ***** */
-p {
+p,
+dt,
+dd {
   font: 400 15px/19px 'Roboto', sans-serif;
   color: #484848;
 }
@@ -54,13 +56,16 @@ h5 {
 
 h6 {
 	font: 400 12px/17px 'Montserrat', sans-serif;
-  font-size: 15px;
+  	font-size: 15px;
 	color: #0084c5;	
 	margin-bottom: 20px;
 }
 
 ul, li {
 	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: #484848;
+	line-height: 19px;
 }
 
 
@@ -244,12 +249,30 @@ i.sprite-icon-download-btn {
 	color: #464646;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
 	color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a:active, .navbar-inverse .navbar-nav>li>a:focus {
+	/*color: #464646;*/
+}
+
+
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+	border-top-color: #000;
+	border-bottom-color: #000;
 }
 
 .navbar-inverse .navbar-nav>.dropdown>a .caret {
 	color: #464646;
+}
+
+@media (max-width: 767px) {
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, 
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
+		color: #428bca;
+	}
 }
 
 .navbar-header {
@@ -352,9 +375,28 @@ i.sprite-icon-download-btn {
     height:30px;
 }
 
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-     color:#1485c3;
+.navbar-inverse .navbar-nav>.open>a, 
+.navbar-inverse .navbar-nav>.open>a:hover, 
+.navbar-inverse .navbar-nav>.open>a:focus {
+     color: #1485c3;
 }
+
+.navbar-inverse .navbar-nav>.dropdown>a .caret  {
+	margin-top: -0.22em;
+}
+
+.navbar-inverse .navbar-nav>.open>a .caret, 
+.navbar-inverse .navbar-nav>.open>a:hover .caret, 
+.navbar-inverse .navbar-nav>.open>a:focus .caret {
+	border-top-color: #1485c3;
+	border-bottom-color: #1485c3;
+}
+
+/*.navbar-inverse .navbar-nav>.dropdown>a:hover .caret
+ {
+	border-top-color: #464646;
+	border-bottom-color: #464646;
+}*/
 
 
 /* ***** Carousel ***** */
@@ -973,6 +1015,10 @@ code {
 	list-style-type: none;
 }
 
+.toc a:hover {
+	text-decoration: none;
+}
+
 /* Highlighting code annotated with [[highlight]] */
 code.highlight {
   border: 1px solid yellow;
@@ -1361,4 +1407,8 @@ dd{
 		-webkit-column-count:1; /* Safari and Chrome */
 		column-count:1;
 	}
+}
+
+.titlepage h3 {
+	font: 400 26px/32px 'Montserrat', sans-serif;
 }
