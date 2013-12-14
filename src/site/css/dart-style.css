@@ -215,7 +215,9 @@ i.sprite-icon-download-btn {
 }
 
 
-
+.nav>li>a {
+	padding: 5px 15px;
+}
 
 /* ***** Nav bar ***** */
 .navbar {
