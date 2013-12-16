@@ -129,6 +129,8 @@ i.sprite-icon-social-twitter {
 	i.sprite-icon-social-twitter {
 		margin-left: 0;
 	}
+
+
 }
 
 i.sprite-icon-social-gplus {
@@ -194,6 +196,12 @@ i.sprite-icon-dd-tip {
 	position: absolute;
 	top: -8px;
 	left: 10px;
+}
+
+@media (max-width: 768px) {
+	i.sprite-icon-dd-tip {
+		display: none;
+	}
 }
 
 i.sprite-icon-close-x {
