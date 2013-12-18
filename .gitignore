@@ -11,6 +11,8 @@ scripts/packages
 pubspec.lock
 packages/
 *.js.deps
+*.sublime-project
+*.sublime-workspace
 
 !src/site/samples/searchable_list/example/packages/
 !src/site/samples/tracker/example/packages/

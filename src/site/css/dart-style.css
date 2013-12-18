@@ -347,6 +347,22 @@ i.sprite-icon-download-btn {
 	background-color: #fff;
 }
 
+.navbar-inverse .navbar-toggle.collapsed:hover .icon-bar{
+  background-color: #fff !important;
+}
+
+.navbar-inverse .navbar-toggle.collapsed:focus .icon-bar,
+.navbar-inverse .navbar-toggle.collapsed:active .icon-bar{
+  background-color: #333 !important;
+}
+
+
+.navbar-inverse .navbar-toggle.mobile-deactivated:focus .icon-bar,
+.navbar-inverse .navbar-toggle.mobile-deactivated:active .icon-bar,
+.navbar-inverse .navbar-toggle.mobile-deactivated:hover .icon-bar {
+  background-color: #333 !important;
+}
+
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
@@ -407,6 +423,19 @@ i.sprite-icon-download-btn {
 	border-top-color: #464646;
 	border-bottom-color: #464646;
 }*/
+
+
+.navbar-inverse .navbar-toggle.collapsed:focus,
+.navbar-inverse .navbar-toggle.collapsed:active{
+  background-color: #fff !important;
+}
+
+.navbar-inverse .navbar-toggle.mobile-deactivated:active,
+.navbar-inverse .navbar-toggle.mobile-deactivated:hover,
+.navbar-inverse .navbar-toggle.mobile-deactivated:focus {
+  background-color: #fff !important;
+}
+
 
 
 /* ***** Carousel ***** */

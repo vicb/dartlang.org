@@ -20,6 +20,11 @@ $(document).ready(function() {
   if (isMobile.any() != true) {
     $('.download-buttons').show();
     $('.os-choices').show();
+  } else {
+    $('.navbar-toggle');
+    $('.icon-bar');
+    $('.navbar-toggle').addClass('mobile-deactivated');
+    $('.icon-bar').addClass('mobile-deactivated');
   }
 
   var addPermalink = function() {
@@ -86,6 +91,20 @@ $(function(){
 
   $('.dart-popover').popover();
 
+  var i = 0;
+  var navToggle = $('.navbar-toggle');
+  var iconBar = $('.icon-bar');
+
+  $(document).on('touchstart', function(e) {
+    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    var targetTouch = $(touch.target);
+    if(targetTouch.hasClass('navbar-toggle') || targetTouch.hasClass('icon-bar')) {
+      navToggle.toggleClass('mobile-deactivated');
+      iconBar.toggleClass('mobile-deactivated');
+      console.log('is over item!');
+    }
+  });
+
   $('.dart-popover').on( 'click', function(e) {
     e.preventDefault();
     if (popOpen) {
@@ -94,6 +113,8 @@ $(function(){
     popOpen = true;
 
   });
+
+  
 
   // Adding the navigation to the popup
   // $("a.dart-popover").each(function(index) {
