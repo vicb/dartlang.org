@@ -108,13 +108,8 @@ $(function(){
     // console.log($(this).scrollTop(), lastScrollPosY);
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     var targetTouch = $(touch.target);
-    if(!navDisabled) {
-      if(targetTouch[0] == navToggle[0] || targetTouch[0] == iconBar[0]) {
-        
-        // iconBar.removeClass('collapsed');
-      }
-    } else {
-      return false;
+    if(navDisabled) {
+      return false
     }
 
     if($(touch.target).parents('.container-page')[0] === containerPage[0]) {
