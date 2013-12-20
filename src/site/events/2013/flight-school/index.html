@@ -33,9 +33,15 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
     <ul>
       <li><a href="#home"       ocu-scroll-click class="current-nav-item">Home</a></li>
       <li><a href="#locations"  ocu-scroll-click>Find an event</a></li>
+<<<<<<< .merge_file_pA8IIQ
       <li><a href="#register"   ocu-scroll-click>Start your own event</a></li>
       <li><a href="#resources"  ocu-scroll-click>Organizer Resources</a></li>
       <li><a href="#faq"        ocu-scroll-click>FAQ</a></li>
+=======
+      <li><a href="#resources"  ocu-scroll-click>Organizer Resources</a></li>
+      <li><a href="#faq"        ocu-scroll-click>FAQ</a></li>
+      <li><a href="#register"   ocu-scroll-click>Start your own event</a></li>
+>>>>>>> .merge_file_1NzZgR
     </ul>
     <div class="mobile-nav-hook" ng-click="nav.show_mobile = !nav.show_mobile">
       <span>&nbsp;</span>
@@ -90,7 +96,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
             <div class="top-border"></div>
             <div class="bottom-border"></div>
 
+<<<<<<< .merge_file_pA8IIQ
 
+=======
+{% raw %}
+>>>>>>> .merge_file_1NzZgR
             <time datetime="{{event.start|coerceDate|date:'yyyy-MM-dd'}}"
               ng-bind="event.start|coerceDate|date:'longDate'"></time>
             <h3 class="event-title" style="font-size:18px">
@@ -99,6 +109,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
             </h3>
             <p class="event-location" ng-bind="event.location"></p>
             <!--<p class="event-description" ng-bind="event.description"></p>-->
+<<<<<<< .merge_file_pA8IIQ
+=======
+{% endraw %}
+
+>>>>>>> .merge_file_1NzZgR
           </div>
 
 
@@ -106,7 +121,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
       </ul>
     </div>
     <p>
+<<<<<<< .merge_file_pA8IIQ
       Can't find an event near you? Consider <a href="#register">starting your own</a>!
+=======
+      Can't find an event near you? Consider <a href="#register" ocu-scroll-nav>starting your own</a>!
+>>>>>>> .merge_file_1NzZgR
     </p>
   </div>
 
@@ -151,7 +170,12 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
       <li>
         <h3>Communities</h3>
         <p>Connect with fellow organizers and other Dartisans over Google+.</p>
+<<<<<<< .merge_file_pA8IIQ
         <a href="https://plus.google.com/communities/103524414949893193373" class="resource-link">Flight School Organizers (use the <a href="#register">form</a> for an invite)</a>
+=======
+        <a href="https://plus.google.com/communities/103524414949893193373" class="resource-link">Flight School Organizers</a>
+        <a href="#register" ocu-scroll-click class="resource-link">Register for an Invite</a>
+>>>>>>> .merge_file_1NzZgR
         <a href="http://g.co/dartisans" class="resource-link">Dartisans</a>
       </li>
     </ul>
@@ -159,7 +183,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
       <li>
         <h3>Swag</h3>
         <p>We'll send Dart swag packs to events that meet the
+<<<<<<< .merge_file_pA8IIQ
           <a href="#howdoigetswag">minimum requirements</a>.</p>
+=======
+          <a href="#howdoigetswag" class="inline" ocu-scroll-click>minimum requirements</a>.</p>
+>>>>>>> .merge_file_1NzZgR
         <a href="#" class="resource-link">Swag Request Form (Coming soon)</a>
       </li>
       <li>
@@ -252,7 +280,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
        feel free to look for speakers inside of, and outside of, the local Dart
        community.
     </p>
+<<<<<<< .merge_file_pA8IIQ
     
+=======
+
+>>>>>>> .merge_file_1NzZgR
     <h3 id="howdoigetswag">I’d like to organize my own Flight School, what do I
       have to do to request a Dart swag packet?</h3>
     <p>We're still working out the details,
@@ -339,6 +371,7 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+<<<<<<< .merge_file_pA8IIQ
 <script src="//google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 <script src="js/plugins.min.js"></script>
 <script src="js/app.js"></script>
@@ -347,6 +380,11 @@ grunticon( [ "img/icons/icons.data.svg.css", "img/icons/icons.data.png.css", "im
 p a { text-decoration: underline; }
 </style>
 
+=======
+<script src="js/plugins.min.js"></script>
+<script src="js/app.js"></script>
+
+>>>>>>> .merge_file_1NzZgR
 {% include analytics.html %}
 
 </body>
