@@ -162,9 +162,7 @@ Right click `pubspec.yaml` and select **Pub Get**.
 * The `packages` directory contains links to 3rd party libraries.
   Those libraries are defined as dependencies in the `pubspec.yaml` file.
   The `pubspec.lock` file lists the currently installed versions for those librairies.
-
 * The `web` directory contains the Pirate Badge app to deploy.
-
 * The `bin` directory contains Dart scripts that run from the command line.
   For example, scripts that run web servers live in `bin`.
 
@@ -340,7 +338,7 @@ dependencies:
   The three packages needed by this app are all hosted on
   [pub.dartlang.org](https://pub.dartlang.org/).
 
-* `any` selects the latest version of the package that satisfies the dependencies.
+* `any` selects the latest version of the package that matches your SDK.
 
 </div></div>
 
@@ -367,8 +365,8 @@ In Dart Editor, expand the top-level `packages` directory.
 * The `browser` package contains the `dart.js` script
   that checks for native Dart support.
 
-* The `http_server` package makes it easier to write HTTP 
-  server code by providing a high-level API.
+* The `http_server` package implements high-level HTTP server
+  functionality, making it easier to write HTTP server code.
 
 * The `path` package provides common path manipulation operations,
   such as joining, splitting, and normalizing.
@@ -468,7 +466,7 @@ and select the
 ##Step 3: Walk through the static file server's code {#step-three}
 
 You can build full HTTP servers with Dart. The HTTP libraries and packages
-support both serving static files and dynamic responses. For this code
+support both serving static files and handling dynamic requests. For this code
 lab, we focus on serving static files.
 
 You need to provide a static file server for this project
@@ -564,13 +562,14 @@ void main() {
 <i class="fa fa-key key-header"> </i> <strong> Key Information </strong>
 
 * The `VirtualDirectory` class from the `http_server` package
-  provides a high-level interface for serving static files and directory listings.
+  provides a high-level interface for serving static files and directory listings to HttpRequests.
 
 * This code redirects directory requests to `piratebadge.html`,
   which is the main HTML file for this app.
-  The deployed app can use this approach because it only consists of a single directory.
+  This approach works because the deployed app has only one directory.
 
-* The `serveFile` method enable serving the requested file to the client.
+* The `serveFile` method serves the requested static file
+  to the given HttpRequest object.
 
 * Without the `http_server` package, this code would be longer and more complex,
   because you would have to use the lower-level `HttpServer`, `HttpRequest`,
